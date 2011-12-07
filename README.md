@@ -1,3 +1,5 @@
+[SBT]: https://github.com/harrah/xsbt/wiki
+
 Stopwatch
 =========
 
@@ -7,11 +9,9 @@ This README.md file is the developer documentation.
 
 Please refer to the website at <http://aboisvert.github.com/stopwatch/> for user documentation.
 
-### About Buildr ###
+### About SBT ###
 
-Stopwatch's build system is based on Apache Buildr <http://buildr.apache.org/> which is a Ruby/JRuby-based build system.
-
-See <http://buildr.apache.org/installing.html> for instructions on installing Buildr.
+This branch of Stopwatch is compatible with [SBT] 0.11.2.
 
 ### Building ###
 
@@ -31,7 +31,7 @@ See <http://buildr.apache.org/installing.html> for instructions on installing Bu
 
 ### Target platform ###
 
-* Scala 2.7.4+ / 2.9+  (source compatible)
+* Scala 2.9.1
 * JVM 1.5+
 
 ### License ###
