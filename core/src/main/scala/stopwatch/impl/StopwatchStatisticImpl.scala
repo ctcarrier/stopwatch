@@ -269,11 +269,11 @@ final class StopwatchStatisticImpl(val group: StopwatchGroup, val name: String,
 
     def formatTime(time: Option[Long]) = time.map(dateFormat.format(_)) getOrElse "N/A"
 
-    ("Stopwatch \"%s\" {hits=%d, throughput=%.3f/s, errors=%d," +
-     "minTime=%dms, avgTime=%dms, maxTime=%dms, totalTime=%dms, stdDev=%dms, " +
-     "currentThreads=%d, avgThreads=%.2f, maxThreads=%d, " +
-     "first=%s, last=%s}" ).format(
-      name, _hits, throughput getOrElse -1L, _errors,
+    ("Stopwatch \"%1$s\" {hits=%2$d, throughput=%3$/s, errors=%4$d," +
+     "minTime=%5$dms, avgTime=%6$dms, maxTime=%7$dms, totalTime=%8$dms, stdDev=%9$dms, " +
+     "currentThreads=%10$d, avgThreads=%11$d, maxThreads=%12$d, " +
+     "first=%13$s, last=%14$s}" ).format(
+      name, _hits, throughput getOrElse -1, _errors,
       _minTime/millis, _averageTime/millis, _maxTime/millis, _totalTime/millis, _standardDeviationTime/millis,
       _currentThreads, _averageThreads, _maxThreads,
       formatTime(firstAccessTime), formatTime(_lastAccessTime))
